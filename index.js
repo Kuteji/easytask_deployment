@@ -100,7 +100,7 @@ const port = process.env.PORT || 4000;
 
 
 app.listen(port, host, () => {
-    console.log('El servidor esta funcionando');
+    console.log('El servidor esta en funcionamiento');
 });
 
 
