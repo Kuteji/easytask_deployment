@@ -1,6 +1,6 @@
 module.exports = {
-   user : 'talaverae4@gmail.com',
-   pass : 'KriptacartogenesisKuteji32',
+   user : '',
+   pass : '',
    host : 'smtp.gmail.com',
    port : '587'
 }
