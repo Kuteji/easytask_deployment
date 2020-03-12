@@ -50,7 +50,7 @@ exports.enviarToken = async (req, res) => {
     // si no existe el usuario
 
     if(!usuario) {
-        req.flash('error', 'La cuenta ingresada no existe!')
+        req.flash('error', 'La cuenta ingresada no existe!');
         res.redirect('/reestablecer');
     }
 
