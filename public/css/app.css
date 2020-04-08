@@ -354,3 +354,14 @@ form input[type="submit"]{
     text-align: center;
     display: block;
 }
+
+.btn-nuevo-proyecto{
+    border: 2px solid white;
+    color: white!important;
+    background: none!important;
+}
+
+.btn-nuevo-proyecto:hover{
+    background: white!important;
+    color: #455A64!important;
+}
