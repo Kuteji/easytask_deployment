@@ -5,16 +5,31 @@ const htmlToText = require('html-to-text');
 const util = require('util');
 const emailConfig = require('../config/email');
 
+//  importar variables.env
+require('dotenv').config({path: 'variables.env'}); 
+
+//local
+// let transport = nodemailer.createTransport({
+//     host: emailConfig.host,
+//     port: emailConfig.port,
+//     auth: {
+//         user: emailConfig.user,
+//         pass: emailConfig.pass
+//     }
+// });
 
 
+// produccion muestra
 let transport = nodemailer.createTransport({
-    host: emailConfig.host,
-    port: emailConfig.port,
+    service: 'Gmail',
     auth: {
-        user: emailConfig.user,
-        pass: emailConfig.pass
+      type: 'OAuth2',
+      user: 'talaverae4@gmail.com',
+      clientId: process.env.MAIL_CLIENT_ID,
+      clientSecret: process.env.MAIL_CLIENT_SECRET,
+      refreshToken: process.env.MAIL_REFRESH_TOKEN
     }
-});
+  });
 
 
     // generar HTML
